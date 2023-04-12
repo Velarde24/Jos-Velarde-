@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplos de funciones</title>
+</head>
+<body id="miBody">
+
+    <button id="btnCambiarFondo"  onclick="cambiarfondo()">Cambiar fondo</button>
+    <p id="pDesaparece">Hola este es el parrafo que va a desaparecer</p>
+    <p id="alumnos"></p>
+    <p id="longitud"></p>
+    <p id="alumnos2"></p>
+    <p id="alumnos3"></p>
+    <p id="longitud2"></p>
+   
+    <script>
+        const myBody=document.getElementBiId("miBody");
+        function cambiarfondo(){
+           miBody.style.background="yellow";
+           document.getElementById("pDesaparece").style.display="none";
+        }
+
+    </script>
+    <script> // uso de array
+         const alumnos=["Joel","Velarde","Dani","Gabriel"];
+
+         //document.getElementById("alumnos").innerHTML=alumnos;
+         //document.getElementById("longitud").innerHTML=longitud.length;
+         alumnos.push("Gonzalo");
+         document.getElementById("alumnos").innerHTML=alumnos;
+         document.getElementById("longitud").innerHTML=alumnos.length;
+         alumnos.pop();
+         document.getElementById("alumnos2").innerHTML=alumnos;
+         delete alumnos[1]
+         document.getElementById("alumnos3").innerHTML=alumnos;
+         document.getElementById("longitud2").innerHTML=alumnos.length;
+
+         const enemigos=["Antonio", "Alberto", "Gonzalo"];
+         document.write(enemigos);
+         enemigos.push("Mario"); //añade al final del array
+         console.log(enemigos);
+         enemigos.unshift("Ana"); //al inicio
+         console.log(enemigos);
+         console.log(enemigos.length);
+         enemigos[3]="Papá";
+         
+         enemigos.pop(); //elimina el último
+         console.log(enemigos);
+         enemigos.shift(); //elimina el primero
+         console.log(enemigos);
+         for( let i=0;i<enemigos.length;i++){
+             console.log("enemigos["+i+"]"+enemigos[i]);
+         }
+         
+         const numeros=[1,2,3,4,5];
+         let suma=0;
+         for (let i=0;i<numeros.length;i++){
+             suma+=numeros[i]; //suma=suma+numeros[1];
+         } 
+        document.write("la suma de todos los elementos es: "+suma); 
+        
+
+    </script>
+    <script>
+        let indice;
+        const num=[2,5,3,1,8];
+        function Mayor(arr){
+            if (typeof(array[0] != undefined)){
+            let numMayor = arr[0];
+            {
+
+            indice=1;
+            for (let i=1;i<num.length;i++){
+                if (arr[i]>numMayor){
+                numMayor = arr[i];
+                indice=i+1;
+            }
+        }
+        return numMayor;
+    
+        }
+        document.write("<br>"+"El mayor elemento del array es: "+Mayor(num)+" y esta en la posición:" +indice);
+        }
+        else (document.write("El priemro elemento está vacío"));
+
+    </script>
+</body>
+</html>
